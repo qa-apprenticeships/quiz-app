@@ -9,13 +9,15 @@
     "start": "http-server src -a localhost -p 8000 -c-1 -d false --proxy http://localhost:8000?",
     "test": "karma start karma.conf.js",
     "test-ci": "karma start karma.conf.js --single-run --browsers ChromeHeadlessNoSandbox",
-    "build": "rimraf \"dist\" && cd src && cpx \"**/*\" ../dist"
+    "build": "rimraf \"dist\" && cd src && cpx \"**/*\" ../dist && npm run substitute",
+    "substitute": "envsub ./dist/services/config.service.js.template ./dist/services/config.service.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "angular-mocks": "^1.8.0",
     "cpx": "^1.5.0",
+    "envsub": "^4.0.7",
     "http-server": "^0.12.3",
     "jasmine-core": "^3.6.0",
     "karma": "^5.2.3",
