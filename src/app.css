@@ -1,7 +1,7 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: aliceblue;
-    background-color: blueviolet;
+    background-color: red;
 }
 
 .error {
@@ -11,7 +11,7 @@ body {
 
 .player {
     border: 1px solid black;
-    background-color: blue;
+    background-color: pink;
     padding: 4px;
     margin-right: 8px;
 }
