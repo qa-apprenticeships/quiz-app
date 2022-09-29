@@ -11,7 +11,7 @@ body {
 
 .player {
     border: 1px solid black;
-    background-color: pink;
+    background-color: blue;
     padding: 4px;
     margin-right: 8px;
 }
