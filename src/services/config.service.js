@@ -2,7 +2,7 @@ angular.module('app').factory('ConfigService', [function() {
 
     var service = {};
 
-    service.apiBase = 'http://localhost:8001/';
+    service.apiBase = 'https://quizapims-env.eba-424vz72p.eu-west-2.elasticbeanstalk.com/';
 
     return service;
 }]);
