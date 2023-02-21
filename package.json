@@ -7,7 +7,8 @@
     "postinstall": "npm run copy-libs",
     "copy-libs": "cpx \"node_modules/{angular/angular.js,angular-route/angular-route.js}\" src/lib -C",
     "start": "http-server src -a localhost -p 8000 -c-1 -d false --proxy http://localhost:8000?",
-    "test": "karma start karma.conf.js"
+    "test": "karma start karma.conf.js",
+    "build": "rimraf \"dist\" && cd src && cpx \"**/*\" ../dist"
   },
   "author": "",
   "license": "ISC",
