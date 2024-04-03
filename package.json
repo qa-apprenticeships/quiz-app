@@ -1,28 +1,29 @@
 {
-  "name": "quiz-web",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
-  "scripts": {
-    "postinstall": "npm run copy-libs",
-    "copy-libs": "cpx \"node_modules/{angular/angular.js,angular-route/angular-route.js}\" src/lib -C",
-    "start": "http-server src -a localhost -p 8000 -c-1 -d false --proxy http://localhost:8000?",
-    "test": "karma start karma.conf.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "angular-mocks": "^1.8.0",
-    "cpx": "^1.5.0",
-    "http-server": "^0.12.3",
-    "jasmine-core": "^3.6.0",
-    "karma": "^5.2.3",
-    "karma-chrome-launcher": "^3.1.0",
-    "karma-jasmine": "^4.0.1",
-    "rimraf": "^3.0.2"
-  },
-  "dependencies": {
-    "angular": "^1.8.0",
-    "angular-route": "^1.8.0"
-  }
+	"name": "quiz-web",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.html",
+	"scripts": {
+		"postinstall": "npm run copy-libs",
+		"copy-libs": "cpx \"node_modules/{angular/angular.js,angular-route/angular-route.js}\" src/lib -C",
+		"start": "http-server src -a localhost -p 8000 -c-1 -d false --proxy http://localhost:8000?",
+		"test": "karma start karma.conf.js",
+		"build": "rimraf \"dist\" && cd src && cpx \"**/*\" ../dist"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"angular-mocks": "^1.8.0",
+		"cpx": "^1.5.0",
+		"http-server": "^0.12.3",
+		"jasmine-core": "^3.6.0",
+		"karma": "^5.2.3",
+		"karma-chrome-launcher": "^3.1.0",
+		"karma-jasmine": "^4.0.1",
+		"rimraf": "^3.0.2"
+	},
+	"dependencies": {
+		"angular": "^1.8.0",
+		"angular-route": "^1.8.0"
+	}
 }
